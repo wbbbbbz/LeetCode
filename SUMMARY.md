@@ -2,8 +2,8 @@
 
 - [Introduction](README.md)
 - [JAVA]()
-  - [2.add-two-numbers](2.add-two-numbers.md)
-  - [203.remove-linked-list-elements](203.remove-linked-list-elements.md)
-  - [804.unique-morse-code-words](804.unique-morse-code-words.md)
-  - [349.intersection-of-two-arrays](349.intersection-of-two-arrays.md)
-  - [350.intersection-of-two-arrays-ii](350.intersection-of-two-arrays-ii.md)
+  - [2.add-two-numbers](leetCode.notes\2.add-two-numbers.md)
+  - [203.remove-linked-list-elements](leetCode.notes\203.remove-linked-list-elements.md)
+  - [804.unique-morse-code-words](leetCode.notes\804.unique-morse-code-words.md)
+  - [349.intersection-of-two-arrays](leetCode.notes\349.intersection-of-two-arrays.md)
+  - [350.intersection-of-two-arrays-ii](leetCode.notes\350.intersection-of-two-arrays-ii.md)
