@@ -151,6 +151,10 @@ class WordDictionary {
     public boolean search(String word) {
         return contains(root, word, 0);
     }
+
+    // 13/13 cases passed (52 ms)
+    // Your runtime beats 24.78 % of java submissions
+    // Your memory usage beats 100 % of java submissions (50.1 MB)
 }
 
 /**
