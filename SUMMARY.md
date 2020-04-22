@@ -11,3 +11,4 @@
   - [303.range-sum-query-immutable](leetCode.notes/303.range-sum-query-immutable.md)
   - [307.range-sum-query-mutable](leetCode.notes/307.range-sum-query-mutable.md)
   - [208.implement-trie-prefix-tree](leetCode.notes/208.implement-trie-prefix-tree.md)
+  - [211.add-and-search-word-data-structure-design](leetCode.notes/211.add-and-search-word-data-structure-design.md)
