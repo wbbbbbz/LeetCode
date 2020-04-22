@@ -9,3 +9,4 @@
   - [350.intersection-of-two-arrays-ii](leetCode.notes/350.intersection-of-two-arrays-ii.md)
   - [347.top-k-frequent-elements](leetCode.notes/347.top-k-frequent-elements.md)
   - [303.range-sum-query-immutable](leetCode.notes/303.range-sum-query-immutable.md)
+  - [307.range-sum-query-mutable](leetCode.notes/307.range-sum-query-mutable.md)
