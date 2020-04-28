@@ -13,3 +13,4 @@
   - [208.implement-trie-prefix-tree](leetCode.notes/208.implement-trie-prefix-tree.md)
   - [211.add-and-search-word-data-structure-design](leetCode.notes/211.add-and-search-word-data-structure-design.md)
   - [677.map-sum-pairs](leetCode.notes/677.map-sum-pairs.md)
+  - [387.first-unique-character-in-a-string](leetCode.notes/387.first-unique-character-in-a-string.md)
