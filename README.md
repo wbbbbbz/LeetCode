@@ -16,3 +16,4 @@
   - [387.first-unique-character-in-a-string](leetCode.notes/387.first-unique-character-in-a-string.md)
   - [94.binary-tree-inorder-traversal](leetCode.notes/94.binary-tree-inorder-traversal.md)
   - [102.binary-tree-level-order-traversal](leetCode.notes/102.binary-tree-level-order-traversal.md)
+  - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
