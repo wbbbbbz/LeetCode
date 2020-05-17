@@ -18,3 +18,4 @@
   - [102.binary-tree-level-order-traversal](leetCode.notes/102.binary-tree-level-order-traversal.md)
   - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
   - [145.binary-tree-postorder-traversal](leetCode.notes/145.binary-tree-postorder-traversal.md)
+  - [589.n-ary-tree-preorder-traversal](leetCode.notes/589.n-ary-tree-preorder-traversal.md)
