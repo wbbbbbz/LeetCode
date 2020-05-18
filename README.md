@@ -22,3 +22,4 @@
   - [590.n-ary-tree-postorder-traversal](leetCode.notes/590.n-ary-tree-postorder-traversal.md)
   - [3.longest-substring-without-repeating-characters](leetCode.notes/3.longest-substring-without-repeating-characters.md)
   - [4.median-of-two-sorted-arrays](leetCode.notes/4.median-of-two-sorted-arrays.md)
+  - [205.isomorphic-strings](leetCode.notes/205.isomorphic-strings.md)
