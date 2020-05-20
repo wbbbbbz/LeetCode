@@ -32,3 +32,4 @@
   - [695.max-area-of-island](leetCode.notes/695.max-area-of-island.md)
   - [1091.shortest-path-in-binary-matrix](leetCode.notes/1091.shortest-path-in-binary-matrix.md)
   - [752.open-the-lock](leetCode.notes/752.open-the-lock.md)
+  - [200.number-of-islands](leetCode.notes/200.number-of-islands.md)
