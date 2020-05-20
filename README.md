@@ -34,3 +34,4 @@
   - [752.open-the-lock](leetCode.notes/752.open-the-lock.md)
   - [200.number-of-islands](leetCode.notes/200.number-of-islands.md)
   - [773.sliding-puzzle](leetCode.notes/773.sliding-puzzle.md)
+  - [1192.critical-connections-in-a-network](leetCode.notes/1192.critical-connections-in-a-network.md)
