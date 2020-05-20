@@ -28,3 +28,4 @@
   - [226.invert-binary-tree](leetCode.notes/226.invert-binary-tree.md)
   - [231.power-of-two](leetCode.notes/231.power-of-two.md)
   - [232.implement-queue-using-stacks](leetCode.notes/232.implement-queue-using-stacks.md)
+  - [785.is-graph-bipartite](leetCode.notes/785.is-graph-bipartite.md)
