@@ -1,5 +1,3 @@
-import java.util.HashSet;
-
 /*
  * @lc app=leetcode id=695 lang=java
  *
@@ -49,139 +47,104 @@ import java.util.HashSet;
 
 // @lc code=start
 class Solution {
-    // grid中每一个顶点看作图的顶点
-    // 如果1与1相连就形成边
-    // 求的是最大顶点数的联通分量
-    // 因为图像顶点是一维的，所以将二维顶点映射一维
-    // 每一行首尾相连！行进制
-    // (x, y) -> x * C + y
-    // v -> x = v / C, y = v % C
 
-    // 找到一个点上下左右四个方向的点：四联通问题
-    // 可以拓展到八联通
-    // dirs[[-1,0],[0, 1],[1, 0],[0, -1]]
-    // nextx = x + dirs[d][0]
+    private class UF {
 
-    private int R, C;
-    private int vertexes;
-    private int[][] grid;
-    private boolean[][] visited;
-    // private int maxIslandArea;
-    // private boolean hasConnectedIsland;
-    private int[][] dirs = new int[][] { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+        private int[] parent;
+        private int[] size; // size[i]表示以i为根的集合中元素个数
+        private int maxSize;
 
-    // 建图，每一个hashSet中含每一个点连接的点
-    private HashSet<Integer>[] graph;
+        public UF(int size) {
+            parent = new int[size];
+            this.size = new int[size];
+            for (int i = 0; i < parent.length; i++) {
+                parent[i] = i; // 这样所有元素组别不一样
+                this.size[i] = 1;
+            }
+            this.maxSize = 1;
+        }
 
-    // 返回grid这个图中最大的联通面积
+        // 返回i所在集合的元素个数
+        public int getSize(int i) {
+            return size[find(i)];
+        }
+
+        // 返回并查集中最大集合的size
+        public int getMaxSize() {
+            return maxSize;
+        }
+
+        // 查找元素p所对应的集合编号
+        private int find(int p) {
+            if (p < 0 && p >= parent.length)
+                throw new IllegalArgumentException("p is out of bound.");
+
+            while (p != parent[p]) {
+                parent[p] = parent[parent[p]];
+                p = parent[p];
+            }
+            return p;
+        }
+
+        public boolean isConnected(int p, int q) {
+            return find(p) == find(q);
+        }
+
+        // p和q所属的集合进行并集处理
+        public void unionElements(int p, int q) {
+            int pRoot = find(p);
+            int qRoot = find(q);
+
+            if (pRoot == qRoot)
+                return;
+
+            // 根据树的元素大小进行判断
+            if (size[pRoot] < size[qRoot]) {
+                parent[pRoot] = qRoot;
+                size[qRoot] += size[pRoot];
+                maxSize = Math.max(size[qRoot], maxSize);
+            } else {
+                parent[qRoot] = pRoot;
+                size[pRoot] += size[qRoot];
+                maxSize = Math.max(size[pRoot], maxSize);
+            }
+        }
+    }
+
     public int maxAreaOfIsland(int[][] grid) {
 
         if (grid == null)
             return 0;
-        R = grid.length;
+        int R = grid.length;
         if (R == 0)
             return 0;
-        C = grid[0].length;
+        int C = grid[0].length;
         if (C == 0)
             return 0;
 
-        this.grid = grid;
-        this.vertexes = R * C;
+        boolean hasIsland = false;
 
-        // graph = constructGraph();
-
-        // if (maxIslandArea == 0)
-        // return 0;
-        // if (!hasConnectedIsland)
-        // return 1;
-
-        // this.visited = new boolean[vertexes];
-        this.visited = new boolean[R][];
-        for (int i = 0; i < R; i++) {
-            visited[i] = new boolean[C];
-        }
-
-        int maxIslandArea = 0;
-
-        for (int x = 0; x < R; x++) {
-            for (int y = 0; y < C; y++) {
-                if (grid[x][y] == 1 && !visited[x][y]) {
-                    maxIslandArea = Math.max(maxIslandArea, dfs(x, y));
-                }
+        int points = R * C;
+        UF uf = new UF(points);
+        for (int i = 0; i < points; i++) {
+            int x = i / C;
+            int y = i % C;
+            if (grid[x][y] == 1) {
+                hasIsland = true;
+                if (y + 1 < C && grid[x][y + 1] == 1)
+                    uf.unionElements(i, i + 1);
+                if (x + 1 < R && grid[x + 1][y] == 1)
+                    uf.unionElements(i, i + C);
             }
         }
 
-        // for (int v = 0; v < vertexes; v++) {
-        // if (graph[v] != null && !visited[v])
-        // maxIslandArea = Math.max(maxIslandArea, dfs(v));
+        return hasIsland ? uf.getMaxSize() : 0;
 
-        // }
-        return maxIslandArea;
+        // 726/726 cases passed (3 ms)
+        // Your runtime beats 49.07 % of java submissions
+        // Your memory usage beats 96.3 % of java submissions (40 MB)
 
-        // 726/726 cases passed (10 ms)
-        // Your runtime beats 5.43 % of java submissions
-        // Your memory usage beats 96.3 % of java submissions (39.8 MB)
     }
-
-    // // 返回以v作为顶点的图的顶点数
-    // private int dfs(int v) {
-    // visited[v] = true;
-    // int res = 1;
-    // for (int w : graph[v]) {
-    // if (!visited[w]) {
-    // res += dfs(w);
-    // }
-    // }
-    // return res;
-    // }
-
-    // 返回以(x, y)作为顶点的图的顶点数
-    private int dfs(int x, int y) {
-        visited[x][y] = true;
-        int res = 1;
-        for (int j = 0; j < 4; j++) {
-            int nextX = x + dirs[j][0];
-            int nextY = y + dirs[j][1];
-            if (inArea(nextX, nextY) && !visited[nextX][nextY] && grid[nextX][nextY] == 1) {
-                res += dfs(nextX, nextY);
-            }
-        }
-        return res;
-        // 726/726 cases passed (5 ms)
-        // Your runtime beats 18.89 % of java submissions
-        // Your memory usage beats 44.44 % of java submissions (45 MB)
-    }
-
-    private boolean inArea(int x, int y) {
-        return x >= 0 && x < R && y >= 0 && y < C;
-    }
-
-    // private HashSet<Integer>[] constructGraph() {
-    // HashSet<Integer>[] res = new HashSet[vertexes];
-    // int[][] dirs = new int[][] { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
-
-    // for (int i = 0; i < vertexes; i++) {
-    // int x = i / C;
-    // int y = i % C;
-    // for (int j = 0; j < 4; j++) {
-    // int nextX = x + dirs[j][0];
-    // int nextY = y + dirs[j][1];
-    // if (grid[x][y] == 1) {
-    // if (res[i] == null) {
-    // res[i] = new HashSet<Integer>();
-    // maxIslandArea = 1;
-    // }
-    // if (nextX >= 0 && nextX < R && nextY >= 0 && nextY < C && grid[nextX][nextY]
-    // == 1) {
-    // res[i].add(nextX * C + nextY);
-    // hasConnectedIsland = true;
-    // }
-    // }
-    // }
-    // }
-    // return res;
-
-    // }
 
 }
 // @lc code=end
