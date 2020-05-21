@@ -35,3 +35,4 @@
   - [200.number-of-islands](leetCode.notes/200.number-of-islands.md)
   - [773.sliding-puzzle](leetCode.notes/773.sliding-puzzle.md)
   - [1192.critical-connections-in-a-network](leetCode.notes/1192.critical-connections-in-a-network.md)
+  - [980.unique-paths-iii](leetCode.notes/980.unique-paths-iii.md)
