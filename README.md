@@ -38,3 +38,4 @@
   - [980.unique-paths-iii](leetCode.notes/980.unique-paths-iii.md)
   - [235.lowest-common-ancestor-of-a-binary-search-tree](leetCode.notes/235.lowest-common-ancestor-of-a-binary-search-tree.md)
   - [257.binary-tree-paths](leetCode.notes/257.binary-tree-paths.md)
+  - [258.add-digits](leetCode.notes/258.add-digits.md)
