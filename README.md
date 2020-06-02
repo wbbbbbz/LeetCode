@@ -40,3 +40,4 @@
   - [257.binary-tree-paths](leetCode.notes/257.binary-tree-paths.md)
   - [258.add-digits](leetCode.notes/258.add-digits.md)
   - [263.ugly-number](leetCode.notes/263.ugly-number.md)
+  - [290.word-pattern](leetCode.notes/290.word-pattern.md)
