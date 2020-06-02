@@ -74,14 +74,14 @@ class Solution {
             s.put(sc, s.getOrDefault(sc, 0) + 1);
         }
 
+        for (Character c : s.keySet()) {
+            B += Math.min(s.get(c), g.getOrDefault(c, 0));
+        }
+
         return A + "A" + B + "B";
     }
+    // 152/152 cases passed (6 ms)
+    // Your runtime beats 51 % of java submissions
+    // Your memory usage beats 5.26 % of java submissions (39.8 MB)
 }
 // @lc code=end
-
-
-    
-        
-        
-    
-
