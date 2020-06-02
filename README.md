@@ -39,3 +39,4 @@
   - [235.lowest-common-ancestor-of-a-binary-search-tree](leetCode.notes/235.lowest-common-ancestor-of-a-binary-search-tree.md)
   - [257.binary-tree-paths](leetCode.notes/257.binary-tree-paths.md)
   - [258.add-digits](leetCode.notes/258.add-digits.md)
+  - [263.ugly-number](leetCode.notes/263.ugly-number.md)
