@@ -36,3 +36,4 @@
   - [773.sliding-puzzle](leetCode.notes/773.sliding-puzzle.md)
   - [1192.critical-connections-in-a-network](leetCode.notes/1192.critical-connections-in-a-network.md)
   - [980.unique-paths-iii](leetCode.notes/980.unique-paths-iii.md)
+  - [235.lowest-common-ancestor-of-a-binary-search-tree](leetCode.notes/235.lowest-common-ancestor-of-a-binary-search-tree.md)
