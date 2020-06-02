@@ -44,3 +44,4 @@
   - [292.nim-game](leetCode.notes/292.nim-game.md)
   - [342.power-of-four](leetCode.notes/342.power-of-four.md)
   - [299.bulls-and-cows](leetCode.notes/299.bulls-and-cows.md)
+  - [345.reverse-vowels-of-a-string](leetCode.notes/345.reverse-vowels-of-a-string.md)
