@@ -47,3 +47,4 @@
   - [345.reverse-vowels-of-a-string](leetCode.notes/345.reverse-vowels-of-a-string.md)
   - [283.move-zeroes](leetCode.notes/283.move-zeroes.md)
   - [27.remove-element](leetCode.notes/27.remove-element.md)
+  - [26.remove-duplicates-from-sorted-array](leetCode.notes/26.remove-duplicates-from-sorted-array.md)
