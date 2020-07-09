@@ -1,4 +1,4 @@
-# LeetCode 个人保存用
+# LeetCode 解题笔记和源码
 
 - [Introduction](README.md)
 - [JAVA]()
@@ -45,3 +45,4 @@
   - [342.power-of-four](leetCode.notes/342.power-of-four.md)
   - [299.bulls-and-cows](leetCode.notes/299.bulls-and-cows.md)
   - [345.reverse-vowels-of-a-string](leetCode.notes/345.reverse-vowels-of-a-string.md)
+  - [283.move-zeroes](leetCode.notes/283.move-zeroes.md)
