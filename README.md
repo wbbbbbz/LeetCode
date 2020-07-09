@@ -46,3 +46,4 @@
   - [299.bulls-and-cows](leetCode.notes/299.bulls-and-cows.md)
   - [345.reverse-vowels-of-a-string](leetCode.notes/345.reverse-vowels-of-a-string.md)
   - [283.move-zeroes](leetCode.notes/283.move-zeroes.md)
+  - [27.remove-element](leetCode.notes/27.remove-element.md)
