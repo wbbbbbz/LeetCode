@@ -50,3 +50,4 @@
   - [26.remove-duplicates-from-sorted-array](leetCode.notes/26.remove-duplicates-from-sorted-array.md)
   - [80.remove-duplicates-from-sorted-array-ii](leetCode.notes/80.remove-duplicates-from-sorted-array-ii.md)
   - [75.sort-colors](leetCode.notes/75.sort-colors.md)
+  - [88.merge-sorted-array](leetCode.notes/88.merge-sorted-array.md)
