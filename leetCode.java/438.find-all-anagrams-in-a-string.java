@@ -140,10 +140,10 @@ class Solution {
                     res.add(left);
                 }
                 if (counter.containsKey(leftChar)) {
-                    counter.put(leftChar, counter.get(leftChar) + 1);
-                    if (counter.get(leftChar) > 0) {
+                    if (counter.get(leftChar) == 0) {
                         size++;
                     }
+                    counter.put(leftChar, counter.get(leftChar) + 1);
                 }
                 left++;
                 // System.out.println("left: " + left + ", j: " + j);
