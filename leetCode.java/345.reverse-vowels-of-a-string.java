@@ -45,8 +45,49 @@ import java.util.Stack;
 class Solution {
     public String reverseVowels(String s) {
 
-        Stack<Character> stack = new Stack<>();
+        if (s == null) {
+            return null;
+        }
+        if (s.length() < 2) {
+            return s;
+        }
 
+        // Stack<Character> stack = new Stack<>();
+
+        // HashSet<Character> set = new HashSet<>();
+
+        // set.add('a');
+        // set.add('e');
+        // set.add('i');
+        // set.add('o');
+        // set.add('u');
+        // set.add('A');
+        // set.add('E');
+        // set.add('I');
+        // set.add('O');
+        // set.add('U');
+
+        // for (char c : s.toCharArray()) {
+        // if (set.contains(c))
+        // stack.push(c);
+        // }
+
+        // StringBuilder news = new StringBuilder();
+
+        // for (char c : s.toCharArray()) {
+        // if (!set.contains(c))
+        // news.append(c);
+        // else
+        // news.append(stack.pop());
+        // }
+
+        // return news.toString();
+
+        // // 481/481 cases passed (8 ms)
+        // // Your runtime beats 29.99 % of java submissions
+        // // Your memory usage beats 44.83 % of java submissions (40.5 MB)
+
+        // 指针碰撞法
         HashSet<Character> set = new HashSet<>();
 
         set.add('a');
@@ -60,26 +101,28 @@ class Solution {
         set.add('O');
         set.add('U');
 
-        for (char c : s.toCharArray()) {
-            if (set.contains(c))
-                stack.push(c);
+        StringBuilder news = new StringBuilder(s);
+        int i = 0;
+        int j = news.length() - 1;
+        while (i < j) {
+            char iChar = news.charAt(i);
+            char jChar = news.charAt(j);
+            // System.out.println("iChar: " + iChar + ", jChar: " + jChar);
+            if (!set.contains(iChar)) {
+                i++;
+            } else if (!set.contains(jChar)) {
+                j--;
+            } else {
+                news.setCharAt(i++, jChar);
+                news.setCharAt(j--, iChar);
+            }
         }
-
-        StringBuilder news = new StringBuilder();
-
-        for (char c : s.toCharArray()) {
-            if (!set.contains(c))
-                news.append(c);
-            else
-                news.append(stack.pop());
-        }
-
         return news.toString();
 
-    }
+        // 481/481 cases passed (7 ms)
+        // Your runtime beats 37.32 % of java submissions
+        // Your memory usage beats 13.09 % of java submissions (41.9 MB)
 
-    // 481/481 cases passed (8 ms)
-    // Your runtime beats 29.99 % of java submissions
-    // Your memory usage beats 44.83 % of java submissions (40.5 MB)
+    }
 }
 // @lc code=end
