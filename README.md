@@ -52,3 +52,5 @@
   - [75.sort-colors](leetCode.notes/75.sort-colors.md)
   - [88.merge-sorted-array](leetCode.notes/88.merge-sorted-array.md)
   - [215.kth-largest-element-in-an-array](leetCode.notes/215.kth-largest-element-in-an-array.md)
+  - [167.two-sum-ii-input-array-is-sortedy](leetCode.notes/167.two-sum-ii-input-array-is-sorted.md)
+  - [125.valid-palindrome](leetCode.notes/125.valid-palindrome.md)
