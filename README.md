@@ -21,6 +21,7 @@
   - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
   - [145.binary-tree-postorder-traversal](leetCode.notes/145.binary-tree-postorder-traversal.md)
   - [146.lru-cache](leetCode.notes/146.lru-cache.md)
+  - [149.max-points-on-a-line](leetCode.notes/149.max-points-on-a-line.md)
   - [167.two-sum-ii-input-array-is-sortedy](leetCode.notes/167.two-sum-ii-input-array-is-sorted.md)
   - [200.number-of-islands](leetCode.notes/200.number-of-islands.md)
   - [202.happy-number](leetCode.notes/202.happy-number.md)
