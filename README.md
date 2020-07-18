@@ -27,6 +27,7 @@
   - [202.happy-number](leetCode.notes/202.happy-number.md)
   - [203.remove-linked-list-elements](leetCode.notes/203.remove-linked-list-elements.md)
   - [205.isomorphic-strings](leetCode.notes/205.isomorphic-strings.md)
+  - [206.reverse-linked-list](leetCode.notes/206.reverse-linked-list.md)
   - [208.implement-trie-prefix-tree](leetCode.notes/208.implement-trie-prefix-tree.md)
   - [209.minimum-size-subarray-sum](leetCode.notes/209.minimum-size-subarray-sum.md)
   - [211.add-and-search-word-data-structure-design](leetCode.notes/211.add-and-search-word-data-structure-design.md)
