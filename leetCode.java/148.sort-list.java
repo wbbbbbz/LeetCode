@@ -57,14 +57,24 @@ class Solution {
         }
 
 
+        ListNode prev = dummy;
+        
         for (int step = 1; step < length; step >>= 1) {
             head = dummy.next;
-            prev = head;
-            for (int i = 0; i < step; i++) {
-                head = head.next;
+
+            while (head.next != null){
+                prev = head;
+                for (int i = 0; i < step; i++) {
+                    head = head.next;
+                    if (head == null){
+                        break;
+                    }
+                }
+                mergeTwoLists(prev, head);
             }
-            
         }
+
+        return dummy.next;
 
         
     }
@@ -98,6 +108,7 @@ class Solution {
             }
             head = head.next;
         }
+    }
 }
 // @lc code=end
 
