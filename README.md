@@ -49,6 +49,7 @@
   - [226.invert-binary-tree](leetCode.notes/226.invert-binary-tree.md)
   - [231.power-of-two](leetCode.notes/231.power-of-two.md)
   - [232.implement-queue-using-stacks](leetCode.notes/232.implement-queue-using-stacks.md)
+  - [234.palindrome-linked-list](leetCode.notes/234.palindrome-linked-list.md)
   - [235.lowest-common-ancestor-of-a-binary-search-tree](leetCode.notes/235.lowest-common-ancestor-of-a-binary-search-tree.md)
   - [237.delete-node-in-a-linked-list](leetCode.notes/237.delete-node-in-a-linked-list.md)
   - [242.valid-anagram](leetCode.notes/242.valid-anagram.md)
