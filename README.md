@@ -14,6 +14,7 @@
   - [76.minimum-window-substring](leetCode.notes/76.minimum-window-substring.md)
   - [80.remove-duplicates-from-sorted-array-ii](leetCode.notes/80.remove-duplicates-from-sorted-array-ii.md)
   - [83.remove-duplicates-from-sorted-list](leetCode.notes/83.remove-duplicates-from-sorted-list.md)
+  - [86.partition-list](leetCode.notes/86.partition-list.md)
   - [88.merge-sorted-array](leetCode.notes/88.merge-sorted-array.md)
   - [92.reverse-linked-list-ii](leetCode.notes/92.reverse-linked-list-ii.md)
   - [94.binary-tree-inorder-traversal](leetCode.notes/94.binary-tree-inorder-traversal.md)
