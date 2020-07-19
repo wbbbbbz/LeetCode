@@ -53,6 +53,7 @@
   - [299.bulls-and-cows](leetCode.notes/299.bulls-and-cows.md)
   - [303.range-sum-query-immutable](leetCode.notes/303.range-sum-query-immutable.md)
   - [307.range-sum-query-mutable](leetCode.notes/307.range-sum-query-mutable.md)
+  - [328.odd-even-linked-list](leetCode.notes/328.odd-even-linked-list.md)
   - [342.power-of-four](leetCode.notes/342.power-of-four.md)
   - [344.reverse-string](leetCode.notes/344.reverse-string.md)
   - [345.reverse-vowels-of-a-string](leetCode.notes/345.reverse-vowels-of-a-string.md)
