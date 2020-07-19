@@ -43,8 +43,61 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
+
+        if (head == null || head.next == null){
+            return head;
+        }
+
+        ListNode dummy = new ListNode(-1, head);
+
+        int length = 0;
+        while (head != null){
+            head = head.next;
+            length++;
+        }
+
+
+        for (int step = 1; step < length; step >>= 1) {
+            head = dummy.next;
+            prev = head;
+            for (int i = 0; i < step; i++) {
+                head = head.next;
+            }
+            
+        }
+
         
     }
+
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null){
+            return l2;
+        }
+        if (l2 == null){
+            return l1;
+        }
+
+        ListNode dummy = new ListNode();
+        ListNode head = dummy;
+
+        while (true){
+            if (l1 == null){
+                head.next = l2;
+                return dummy.next;
+            }
+            if (l2 == null){
+                head.next = l1;
+                return dummy.next;
+            }
+            if (l1.val <= l2.val){
+                head.next = l1;
+                l1 = l1.next;
+            } else {
+                head.next = l2;
+                l2 = l2.next;
+            }
+            head = head.next;
+        }
 }
 // @lc code=end
 
