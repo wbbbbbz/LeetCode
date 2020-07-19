@@ -7,6 +7,7 @@
   - [3.longest-substring-without-repeating-characters](leetCode.notes/3.longest-substring-without-repeating-characters.md)
   - [4.median-of-two-sorted-arrays](leetCode.notes/4.median-of-two-sorted-arrays.md)
   - [15.3-sum](leetCode.notes/15.3-sum.md)
+  - [21.merge-two-sorted-lists](leetCode.notes/21.merge-two-sorted-lists.md)
   - [26.remove-duplicates-from-sorted-array](leetCode.notes/26.remove-duplicates-from-sorted-array.md)
   - [27.remove-element](leetCode.notes/27.remove-element.md)
   - [49.group-anagrams](leetCode.notes/49.group-anagrams.md)
