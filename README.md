@@ -26,6 +26,7 @@
   - [102.binary-tree-level-order-traversal](leetCode.notes/102.binary-tree-level-order-traversal.md)
   - [125.valid-palindrome](leetCode.notes/125.valid-palindrome.md)
   - [136.single-number](leetCode.notes/136.single-number.md)
+  - [143.reorder-list](leetCode.notes/143.reorder-list.md)
   - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
   - [145.binary-tree-postorder-traversal](leetCode.notes/145.binary-tree-postorder-traversal.md)
   - [146.lru-cache](leetCode.notes/146.lru-cache.md)
