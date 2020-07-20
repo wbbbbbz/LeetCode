@@ -3,6 +3,7 @@ package src;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.function.ToIntBiFunction;
 
 /*
  * @lc app=leetcode id=719 lang=java
@@ -113,6 +114,34 @@ class test {
         // 19/19 cases passed (888 ms)
         // Your runtime beats 5.11 % of java submissions
         // Your memory usage beats 5.09 % of java submissions (89.8 MB)
+    }
+
+        public int evalRPN(String[] tokens) {
+
+            // ToIntBiFunction<Integer, Integer> add = (a, b) -> a + b;
+            // ToIntBiFunction<Integer, Integer> substract = (a, b) -> a - b;
+            // ToIntBiFunction<Integer, Integer> multiply = (a, b) -> a * b;
+            // ToIntBiFunction<Integer, Integer> divide = (a, b) -> a / b;
+    
+            HashMap<String, ToIntBiFunction<Integer, Integer>> map = new HashMap<>();
+    
+            map.put("+", (a, b) -> a + b);
+            map.put("-", (a, b) -> a - b);
+            map.put("*", (a, b) -> a * b);
+            map.put("/", (a, b) -> a / b);
+    
+            Stack<Integer> stack = new Stack<>();
+    
+            for(String s : tokens){
+                if (!map.containsKey(s)){
+                    stack.add(s);
+                } else {
+                    assert(stack.size() >= 2);
+                    map.get(s).applyAsInt(Integer.parseInt(s), u)
+                }
+            }
+    
+            return 0;
     }
 
     public static void main(String[] args) {
