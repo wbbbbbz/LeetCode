@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
+
+import javax.swing.tree.TreeNode;
 
 /*
  * @lc app=leetcode id=145 lang=java
@@ -45,10 +48,41 @@ import java.util.List;
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
 
-        postorderTraversal(root, res);
+        // postorderTraversal(root, res);
+
+        // postOrder: left, right, val
+        // stack: val, right, left
+        Stack<Boolean> isVal = new Stack<>();
+        Stack<TreeNode> nodes = new Stack<>();
+
+        isVal.add(false);
+        nodes.add(root);
+        while (!nodes.empty()) {
+            TreeNode temp = nodes.pop();
+            if (isVal.pop()) {
+                res.add(temp.val);
+            } else {
+                nodes.add(temp);
+                isVal.add(true);
+                if (temp.right != null) {
+                    nodes.add(temp.right);
+                    isVal.add(false);
+                }
+                if (temp.left != null) {
+                    nodes.add(temp.left);
+                    isVal.add(false);
+                }
+            }
+        }
 
         return res;
+//         68/68 cases passed (1 ms)
+// Your runtime beats 36.47 % of java submissions
+// Your memory usage beats 24.47 % of java submissions (37.9 MB)
 
     }
 
@@ -60,7 +94,7 @@ class Solution {
         postorderTraversal(root.right, res);
         res.add(root.val);
 
-//         68/68 cases passed (0 ms)
+        // 68/68 cases passed (0 ms)
         // Your runtime beats 100 % of java submissions
         // Your memory usage beats 5.63 % of java submissions (39.4 MB)
     }
