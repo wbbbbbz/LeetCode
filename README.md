@@ -61,6 +61,7 @@
   - [257.binary-tree-paths](leetCode.notes/257.binary-tree-paths.md)
   - [258.add-digits](leetCode.notes/258.add-digits.md)
   - [263.ugly-number](leetCode.notes/263.ugly-number.md)
+  - [279.perfect-squares](leetCode.notes/279.perfect-squares.md)
   - [283.move-zeroes](leetCode.notes/283.move-zeroes.md)
   - [290.word-pattern](leetCode.notes/290.word-pattern.md)
   - [292.nim-game](leetCode.notes/292.nim-game.md)
