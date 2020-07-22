@@ -10,6 +10,7 @@
   - [19.remove-nth-node-from-end-of-list](leetCode.notes/19.remove-nth-node-from-end-of-list.md)
   - [20.valid-parentheses](leetCode.notes/20.valid-parentheses.md)
   - [21.merge-two-sorted-lists](leetCode.notes/21.merge-two-sorted-lists.md)
+  - [23.merge-k-sorted-lists](leetCode.notes/23.merge-k-sorted-lists.md)
   - [24.swap-nodes-in-pairs](leetCode.notes/24.swap-nodes-in-pairs.md)
   - [26.remove-duplicates-from-sorted-array](leetCode.notes/26.remove-duplicates-from-sorted-array.md)
   - [27.remove-element](leetCode.notes/27.remove-element.md)
