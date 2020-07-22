@@ -56,6 +56,7 @@
   - [217.contains-duplicate](leetCode.notes/217.contains-duplicate.md)
   - [219.contains-duplicate-ii](leetCode.notes/219.contains-duplicate-ii.md)
   - [220.contains-duplicate-iii](leetCode.notes/220.contains-duplicate-iii.md)
+  - [222.count-complete-tree-nodes](leetCode.notes/222.count-complete-tree-nodes.md)
   - [225.implement-stack-using-queues](leetCode.notes/225.implement-stack-using-queues.md)
   - [226.invert-binary-tree](leetCode.notes/226.invert-binary-tree.md)
   - [231.power-of-two](leetCode.notes/231.power-of-two.md)
