@@ -86,6 +86,7 @@
   - [349.intersection-of-two-arrays](leetCode.notes/349.intersection-of-two-arrays.md)
   - [350.intersection-of-two-arrays-ii](leetCode.notes/350.intersection-of-two-arrays-ii.md)
   - [387.first-unique-character-in-a-string](leetCode.notes/387.first-unique-character-in-a-string.md)
+  - [404.sum-of-left-leaves](leetCode.notes/404.sum-of-left-leaves.md)
   - [438.find-all-anagrams-in-a-string](leetCode.notes/438.find-all-anagrams-in-a-string.md)
   - [445.add-two-numbers-ii](leetCode.notes/445.add-two-numbers-ii.md)
   - [447.number-of-boomerangs](leetCode.notes/447.number-of-boomerangs.md)
