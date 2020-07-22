@@ -29,6 +29,7 @@
   - [103.binary-tree-zigzag-level-order-traversal](leetCode.notes/103.binary-tree-zigzag-level-order-traversal.md)
   - [104.maximum-depth-of-binary-tree](leetCode.notes/104.maximum-depth-of-binary-tree.md)
   - [107.binary-tree-level-order-traversal-ii](leetCode.notes/107.binary-tree-level-order-traversal-ii.md)
+  - [111.minimum-depth-of-binary-tree](leetCode.notes/111.minimum-depth-of-binary-tree.md)
   - [125.valid-palindrome](leetCode.notes/125.valid-palindrome.md)
   - [127.word-ladder](leetCode.notes/127.word-ladder.md)
   - [136.single-number](leetCode.notes/136.single-number.md)
