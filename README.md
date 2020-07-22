@@ -25,6 +25,7 @@
   - [88.merge-sorted-array](leetCode.notes/88.merge-sorted-array.md)
   - [92.reverse-linked-list-ii](leetCode.notes/92.reverse-linked-list-ii.md)
   - [94.binary-tree-inorder-traversal](leetCode.notes/94.binary-tree-inorder-traversal.md)
+  - [100.same-tree](leetCode.notes/100.same-tree.md)
   - [102.binary-tree-level-order-traversal](leetCode.notes/102.binary-tree-level-order-traversal.md)
   - [103.binary-tree-zigzag-level-order-traversal](leetCode.notes/103.binary-tree-zigzag-level-order-traversal.md)
   - [104.maximum-depth-of-binary-tree](leetCode.notes/104.maximum-depth-of-binary-tree.md)
