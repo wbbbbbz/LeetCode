@@ -25,6 +25,7 @@
   - [86.partition-list](leetCode.notes/86.partition-list.md)
   - [88.merge-sorted-array](leetCode.notes/88.merge-sorted-array.md)
   - [92.reverse-linked-list-ii](leetCode.notes/92.reverse-linked-list-ii.md)
+  - [93.restore-ip-addresses](leetCode.notes/93.restore-ip-addresses.md)
   - [94.binary-tree-inorder-traversal](leetCode.notes/94.binary-tree-inorder-traversal.md)
   - [100.same-tree](leetCode.notes/100.same-tree.md)
   - [101.symmetric-tree](leetCode.notes/101.symmetric-tree.md)
