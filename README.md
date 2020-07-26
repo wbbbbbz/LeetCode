@@ -40,6 +40,7 @@
   - [125.valid-palindrome](leetCode.notes/125.valid-palindrome.md)
   - [127.word-ladder](leetCode.notes/127.word-ladder.md)
   - [129.sum-root-to-leaf-numbers](leetCode.notes/129.sum-root-to-leaf-numbers.md)
+  - [131.palindrome-partitioning](leetCode.notes/131.palindrome-partitioning.md)
   - [136.single-number](leetCode.notes/136.single-number.md)
   - [143.reorder-list](leetCode.notes/143.reorder-list.md)
   - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
