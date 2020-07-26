@@ -16,6 +16,7 @@
   - [26.remove-duplicates-from-sorted-array](leetCode.notes/26.remove-duplicates-from-sorted-array.md)
   - [27.remove-element](leetCode.notes/27.remove-element.md)
   - [39.combination-sum](leetCode.notes/39.combination-sum.md)
+  - [40.combination-sum-ii](leetCode.notes/40.combination-sum-ii.md)
   - [46.permutations](leetCode.notes/46.permutations.md)
   - [47.permutations-ii](leetCode.notes/47.permutations-ii.md)
   - [49.group-anagrams](leetCode.notes/49.group-anagrams.md)
