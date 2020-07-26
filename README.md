@@ -21,6 +21,7 @@
   - [61.rotate-list](leetCode.notes/61.rotate-list.md)
   - [75.sort-colors](leetCode.notes/75.sort-colors.md)
   - [76.minimum-window-substring](leetCode.notes/76.minimum-window-substring.md)
+  - [77.combinations](leetCode.notes/77.combinations.md)
   - [80.remove-duplicates-from-sorted-array-ii](leetCode.notes/80.remove-duplicates-from-sorted-array-ii.md)
   - [82.remove-duplicates-from-sorted-list-ii](leetCode.notes/82.remove-duplicates-from-sorted-list-ii.md)
   - [83.remove-duplicates-from-sorted-list](leetCode.notes/83.remove-duplicates-from-sorted-list.md)
