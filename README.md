@@ -65,6 +65,7 @@
   - [209.minimum-size-subarray-sum](leetCode.notes/209.minimum-size-subarray-sum.md)
   - [211.add-and-search-word-data-structure-design](leetCode.notes/211.add-and-search-word-data-structure-design.md)
   - [215.kth-largest-element-in-an-array](leetCode.notes/215.kth-largest-element-in-an-array.md)
+  - [216.combination-sum-iii](leetCode.notes/216.combination-sum-iii.md)
   - [217.contains-duplicate](leetCode.notes/217.contains-duplicate.md)
   - [219.contains-duplicate-ii](leetCode.notes/219.contains-duplicate-ii.md)
   - [220.contains-duplicate-iii](leetCode.notes/220.contains-duplicate-iii.md)
