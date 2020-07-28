@@ -58,32 +58,66 @@ class Solution {
         // Testcase: [4,1,-1,2,-1,2,3]\n2
         // Testcase: [5,3,1,1,1,3,73,1]\n2
 
+        if (nums.length == k){
+            return nums;
+        }
+
         // 1.创建map记录frequency:
         Map<Integer, Integer> frequency = new HashMap<>();
         for (int i : nums)
             frequency.put(i, frequency.getOrDefault(i, 0) + 1);
+        int n = frequency.size();
+        // System.out.println(frequency);
 
-        // 2.创建大小为k的优先队列，元素越小优先级越高
-        PriorityQueue<Map.Entry<Integer, Integer>> priorityQueue = new PriorityQueue<>(k,
-                (o1, o2) -> o1.getValue() - o2.getValue());
+        // // 2.创建大小为k的优先队列，元素越小优先级越高
+        // PriorityQueue<Map.Entry<Integer, Integer>> priorityQueue = new PriorityQueue<>(k,
+        //         (o1, o2) -> o1.getValue() - o2.getValue());
 
+        // int[] output = new int[k];
+
+        // // 3.遍历每一个map元素，如果优先队列还没到size就直接加入，如果到了size就要判断现在的频率是否大于topK的最小值，是就加入
+        // for (Map.Entry<Integer, Integer> e : frequency.entrySet()) {
+        //     if (priorityQueue.size() < k)
+        //         priorityQueue.add(e);
+        //     else if (e.getValue() > priorityQueue.peek().getValue()) {
+        //         priorityQueue.poll();
+        //         priorityQueue.add(e);
+        //     }
+        // }
+
+        // int index = 0;
+
+        // // 4.输出topK优先队列里的所有key
+        // for (Map.Entry<Integer, Integer> e : priorityQueue) {
+        //     output[index++] = e.getKey();
+        // }
+
+        // return output;
+
+        // 反过来，维持一个n-k大小的优先队列，元素越大优先级越高。这样最后不在该优先队列里的就是topK元素
         int[] output = new int[k];
-
-        // 3.遍历每一个map元素，如果优先队列还没到size就直接加入，如果到了size就要判断现在的频率是否大于topK的最小值，是就加入
-        for (Map.Entry<Integer, Integer> e : frequency.entrySet()) {
-            if (priorityQueue.size() < k)
-                priorityQueue.add(e);
-            else if (e.getValue() > priorityQueue.peek().getValue()) {
-                priorityQueue.poll();
-                priorityQueue.add(e);
-            }
-        }
-
         int index = 0;
 
-        // 4.输出topK优先队列里的所有key
-        for (Map.Entry<Integer, Integer> e : priorityQueue) {
-            output[index++] = e.getKey();
+        if (n == k){
+            for (int i : frequency.keySet()) {
+                output[index++] = i;
+            }
+            return output;
+        }
+        PriorityQueue<Map.Entry<Integer, Integer>> priorityQueue = new PriorityQueue<>(n - k,
+                (o1, o2) -> o2.getValue() - o1.getValue());
+
+
+        for (Map.Entry<Integer, Integer> e : frequency.entrySet()) {
+            if (priorityQueue.size() < n - k)
+                priorityQueue.add(e);
+            else if (e.getValue() < priorityQueue.peek().getValue()) {
+                output[index++] = priorityQueue.poll().getKey();
+                priorityQueue.add(e);
+            } else {
+                output[index++] = e.getKey();
+            }
+            // System.out.println(priorityQueue);
         }
 
         return output;

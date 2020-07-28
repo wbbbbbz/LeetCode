@@ -1,3 +1,5 @@
+import sun.launcher.resources.launcher;
+
 /*
  * @lc app=leetcode id=222 lang=java
  *
@@ -55,13 +57,39 @@
  */
 class Solution {
     public int countNodes(TreeNode root) {
+//         if (root == null){
+//             return 0;
+//         }
+//         return countNodes(root.left) + countNodes(root.right) + 1;
+// //         18/18 cases passed (0 ms)
+// // Your runtime beats 100 % of java submissions
+// // Your memory usage beats 5.03 % of java submissions (47.2 MB)
+
         if (root == null){
             return 0;
         }
-        return countNodes(root.left) + countNodes(root.right) + 1;
-//         18/18 cases passed (0 ms)
-// Your runtime beats 100 % of java submissions
-// Your memory usage beats 5.03 % of java submissions (47.2 MB)
+        int h = height(root);
+        int res = 0;
+        
+        while (root != null){
+            if (height(root.right) == h - 1){
+                res += (1 << (h - 1));
+                root = root.right;
+            } else {
+                res += (1 << (h - 2));
+                root = root.left;
+            }
+            h--;
+        }
+        return res;
+        // 0ms
+    }
+
+    private int height(TreeNode root){
+        if (root == null){
+            return 0;
+        }
+        return 1 + height(root.left);
     }
 }
 // @lc code=end
