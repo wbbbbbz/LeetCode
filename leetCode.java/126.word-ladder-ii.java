@@ -71,23 +71,92 @@ import java.util.*;
 // @lc code=start
 class Solution {
 
-    private Set<String> endWordSet;
+    // testcase: "a"\n"c"\n["a", "b", "c"]
 
-    private List<List<String>> ladders;
+    private String endWord;
 
+    private List<List<String>> ladders = new LinkedList<>();
+
+    private HashMap<String, HashSet<String>> map = new HashMap<>();
+
+    private HashSet<String> words = new HashSet<>();
+
+    // BFS生成最短路径图
+    // DFS进行combination的输出
+    // 使用HashMap<String, ArrayList<String>>记录最短路径图
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-        this.endWordSet = new HashSet<>();
-        endWordSet.add(endWord);
-        this.ladders = new LinkedList<>();
+
+        if (endWord == null || wordList.size() == 0 || !wordList.contains(endWord)) {
+            return ladders;
+        }
+
+        this.endWord = endWord;
+
+        this.words.addAll(wordList);
+        words.remove(beginWord);
+
+        LinkedList<String> queue = new LinkedList<>();
+
+        queue.add(beginWord);
+
+        while (!queue.isEmpty()) {
+            // System.out.println(queue);
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String s = queue.pollFirst();
+                if (!map.containsKey(s)) {
+                    HashSet<String> v = findV(s);
+                    map.put(s, v);
+                    queue.addAll(v);
+                }
+            }
+            words.removeAll(queue);
+        }
+
+        // System.out.println(map);
+
+        LinkedList<String> path = new LinkedList<>();
+        path.add(beginWord);
+
+        dfs(beginWord, path);
+
+        return ladders;
+
+        // 99ms, 46MB
+
     }
 
-    private void findLadder(Set<String> bSet, Set<String> sSet, List<String> path){
-        if (sSet.isEmpty()){
+    private HashSet<String> findV(String s) {
+
+        HashSet<String> set = new HashSet<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char[] c = s.toCharArray();
+            for (char j = 'a'; j <= 'z'; j++) {
+                c[i] = j;
+                String temp = new String(c);
+                if (words.contains(temp)) {
+                    set.add(temp);
+                }
+            }
+        }
+
+        return set;
+    }
+
+    private void dfs(String s, LinkedList<String> path) {
+
+        if (s.equals(endWord)) {
+            ladders.add(new LinkedList<String>(path));
             return;
         }
-        sSet.removeAll(bSet);
-        
+
+        for (String temp : map.get(s)) {
+            path.add(temp);
+            dfs(temp, path);
+            path.pollLast();
+        }
+
     }
 }
 // @lc code=end
-
