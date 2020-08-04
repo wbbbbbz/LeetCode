@@ -59,39 +59,53 @@
  */
 class Solution {
 
-    private TreeNode node;
-    TreeNode p;
-    TreeNode q;
+    // private TreeNode node;
+    // TreeNode p;
+    // TreeNode q;
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
-        node = null;
-        this.p = p;
-        this.q = q;
-        helper(root);
-        return node;
+        // node = null;
+        // this.p = p;
+        // this.q = q;
+        // helper(root);
+        // return node;
 
+        if (root == null || p == null || q == null){
+            return null;
+        }
+
+        if (p.val > root.val && q.val > root.val){
+            return lowestCommonAncestor(root.right, p, q);
+        }
+
+        if (p.val < root.val && q.val < root.val){
+            return lowestCommonAncestor(root.left, p, q);
+        }
+
+        return root;
+        // 3ms, 40.7MB
     }
 
-    private int helper(TreeNode root) {
-        if (root == null)
-            return 0;
+//     private int helper(TreeNode root) {
+//         if (root == null)
+//             return 0;
 
-        int res = 0;
+//         int res = 0;
 
-        if (root == p || root == q)
-            res++;
+//         if (root == p || root == q)
+//             res++;
 
-        res += helper(root.left) + helper(root.right);
+//         res += helper(root.left) + helper(root.right);
 
-        if (res == 2 && node == null)
-            node = root;
+//         if (res == 2 && node == null)
+//             node = root;
 
-        return res;
+//         return res;
 
-//         27/27 cases passed (4 ms)
-// Your runtime beats 68 % of java submissions
-// Your memory usage beats 5.1 % of java submissions (40 MB)
-    }
+// //         27/27 cases passed (4 ms)
+// // Your runtime beats 68 % of java submissions
+// // Your memory usage beats 5.1 % of java submissions (40 MB)
+    // }
 }
 // @lc code=end
