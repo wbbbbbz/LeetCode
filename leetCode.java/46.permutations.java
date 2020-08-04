@@ -47,11 +47,15 @@ class Solution {
         }
 
         this.nums = nums;
+
+        LinkedList<Integer> path = new LinkedList<>();
         
         for (int i = 0; i < nums.length; i++) {
             boolean[] visited = new boolean[nums.length];
             visited[i] = true;
-            genPermutation(visited, nums.length - 1, new LinkedList<Integer>(Arrays.asList(nums[i])));
+            path.add(nums[i]);
+            genPermutation(visited, nums.length - 1, path);
+            path.pollLast();
         }
         return res;
     }
@@ -63,13 +67,13 @@ class Solution {
         for (int i = 0; i < visited.length; i++) {
             if (!visited[i]){
                 visited[i] = true;
-                LinkedList<Integer> temp = new LinkedList<>(perm);
-                temp.add(this.nums[i]);
-                genPermutation(visited.clone(), rest - 1, temp);
+                perm.add(nums[i]);
+                genPermutation(visited.clone(), rest - 1, perm);
+                perm.pollLast();
                 visited[i] = false;
             }
         }
-        // 2ms
+        // 2ms, 39.8MB
     }
 }
 // @lc code=end

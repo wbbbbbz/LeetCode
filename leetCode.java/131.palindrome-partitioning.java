@@ -53,21 +53,27 @@ class Solution {
         }
 
         return res;
+        // 2ms, 40.8MB
 
     }
 
-    private void partition(int start, int end, LinkedList<String> list) {
+    private boolean partition(int start, int end, LinkedList<String> list) {
 
         if (start == end || isPalindrome(start, end)) {
             list.add(new String(this.str, start, end - start + 1));
+            int size = list.size();
             if (end == str.length - 1) {
-                res.add(list);
+                res.add(new LinkedList<>(list));
             } else {
                 for (int i = end + 1; i < str.length; i++) {
-                    partition(end + 1, i, new LinkedList<>(list));
+                    if (partition(end + 1, i, list)){
+                        list.pollLast();
+                    }
                 }
             }
+            return true;
         }
+        return false;
     }
 
     private boolean isPalindrome(int start, int end) {

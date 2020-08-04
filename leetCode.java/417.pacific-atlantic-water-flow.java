@@ -61,23 +61,21 @@ import java.util.*;
 class Solution {
 
     // testcase: [[1,2,3],[8,9,4],[7,6,5]]
-    
-    private int[][] pacific;
-    private int[][] atlantic;
-    private int[][] matrix;
 
     private int M;
     private int N;
+    private int[][] matrix;
 
     public List<List<Integer>> pacificAtlantic(int[][] matrix) {
 
         // 四联通问题
         // 使用pacific和atlantic进行记录
         // -1是不连通，0是未查找，1是连通
-    
+        // 从已知是true的地方开始进行floodfill，只要能进入(高度更高的地方)就改成true即可
+
         List<List<Integer>> res = new LinkedList<>();
-        
-        if (matrix == null || matrix.length == 0){
+
+        if (matrix == null || matrix.length == 0) {
             return res;
         }
 
@@ -85,91 +83,49 @@ class Solution {
         this.N = matrix[0].length;
         this.matrix = matrix;
 
-        this.pacific = new int[M][];
-        this.atlantic = new int[M][];
+        boolean[][] pacific = new boolean[M][N];
+        boolean[][] atlantic = new boolean[M][N];
 
-        for (int i = 0; i < M; i++) {
-            this.pacific[i] = new int[N];
-            this.atlantic[i] = new int[N];
+        // 行的floodfill
+        for (int i = 0; i < this.N; i++) {
+            floodfill(0, i, Integer.MIN_VALUE, pacific);
+            floodfill(M - 1, i, Integer.MIN_VALUE, atlantic);
+        }
+
+        // 列的floodfill
+        for (int i = 0; i < this.M; i++) {
+            floodfill(i, 0, Integer.MIN_VALUE, pacific);
+            floodfill(i, N - 1, Integer.MIN_VALUE, atlantic);
         }
 
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
-                if (this.pacific[i][j] == 0){
-                    if (pacific(i + 1, j, matrix[i][j]) || pacific(i - 1, j, matrix[i][j])
-                        || pacific(i, j + 1, matrix[i][j]) || pacific(i, j - 1, matrix[i][j]))
-                        this.pacific[i][j] = 1;
-                    else
-                        this.pacific[i][j] = -1;
-                }
-                if (this.atlantic[i][j] == 0){
-                    if (atlantic(i + 1, j, matrix[i][j]) || atlantic(i - 1, j, matrix[i][j])
-                    || atlantic(i, j + 1, matrix[i][j]) || atlantic(i, j - 1, matrix[i][j]))
-                        this.atlantic[i][j] = 1;
-                    else
-                        this.atlantic[i][j] = -1;
-                }
-                if (this.pacific[i][j] == 1 && this.atlantic[i][j] == 1){
+                if (pacific[i][j] && atlantic[i][j]){
                     res.add(Arrays.asList(i, j));
                 }
-                System.out.println(Arrays.toString(pacific[i]));
-                System.out.println(Arrays.toString(atlantic[i]));
             }
         }
 
         return res;
 
+        // 5ms
+        // 40.6MB
     }
 
-    private boolean pacific(int i, int j, int last){
-        if (i < 0 || j < 0){
-            return true;
+    private void floodfill(int i, int j, int last, boolean[][] ocean){
+        if (!inArea(i, j) || last > matrix[i][j] || ocean[i][j]){
+            return;
         }
-        if (i >= M || j >= N){
-            return false;
-        }
-        if (matrix[i][j] > last){
-            return false;
-        }
-        if (pacific[i][j] != 0){
-            return pacific[i][j] == 1;
-        }
-        boolean res = pacific(i + 1, j, matrix[i][j])
-                    || pacific(i - 1, j, matrix[i][j])
-                    || pacific(i, j + 1, matrix[i][j])
-                    || pacific(i, j - 1, matrix[i][j]);
-        if (res){
-            pacific[i][j] = 1;
-        } else {
-            pacific[i][j] = -1;
-        }
-        return res;
+        ocean[i][j] = true;
+        floodfill(i + 1, j, matrix[i][j], ocean);
+        floodfill(i - 1, j, matrix[i][j], ocean);
+        floodfill(i, j + 1, matrix[i][j], ocean);
+        floodfill(i, j - 1, matrix[i][j], ocean);
     }
 
-    private boolean atlantic(int i, int j, int last){
-        if (i >= M || j >= N){
-            return true;
-        }
-        if (i < 0 || j < 0){
-            return false;
-        }
-        if (matrix[i][j] > last){
-            return false;
-        }
-        if (atlantic[i][j] != 0){
-            return atlantic[i][j] == 1;
-        }
-        boolean res = atlantic(i + 1, j, matrix[i][j])
-                    || atlantic(i - 1, j, matrix[i][j])
-                    || atlantic(i, j + 1, matrix[i][j])
-                    || atlantic(i, j - 1, matrix[i][j]);
-        if (res){
-            atlantic[i][j] = 1;
-        } else {
-            atlantic[i][j] = -1;
-        }
-        return res;
-    }
+    private boolean inArea(int i, int j){
+        return i >= 0 && j >= 0 && i < M && j < N;
+    } 
+
 }
 // @lc code=end
-

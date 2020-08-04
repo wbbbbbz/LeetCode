@@ -46,10 +46,12 @@ class Solution {
 
         this.n = n;
 
-        for (int i = 1; i <= n; i++) {
-            LinkedList<Integer> temp = new LinkedList<>();
-            temp.add(i);
-            genCom(i + 1, k - 1, temp);
+        LinkedList<Integer> com = new LinkedList<>();
+
+        for (int i = 1; i <= n - k + 1; i++) {
+            com.add(i);
+            genCom(i + 1, k - 1, com);
+            com.pollLast();
         }
 
         return res;
@@ -59,15 +61,16 @@ class Solution {
 
         if (rest == 0){
             res.add(new LinkedList<Integer>(com));
+            return;
         }
 
-        for (int i = start; i <= n; i++) {
+        for (int i = start; i <= n - rest + 1; i++) {
             com.add(i);
             genCom(i + 1, rest - 1, com);
             com.pollLast();
         }
 
-        // 16ms
+        // 2ms, 42.6ms
     }
 }
 // @lc code=end
