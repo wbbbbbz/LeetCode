@@ -86,7 +86,9 @@ class Solution {
         res = Math.min(Math.abs(last - root.val), res);
         last = root.val;
         inOrderDFS(root.right);
+        // 0ms, 37.1MB
     }
+    
 }
 // @lc code=end
 

@@ -117,6 +117,7 @@
   - [719.find-k-th-smallest-pair-distance](leetCode.notes/719.find-k-th-smallest-pair-distance.md)
   - [752.open-the-lock](leetCode.notes/752.open-the-lock.md)
   - [773.sliding-puzzle](leetCode.notes/773.sliding-puzzle.md)
+  - [783.minimum-distance-between-bst-nodes](leetCode.notes/783.minimum-distance-between-bst-nodes.md)
   - [785.is-graph-bipartite](leetCode.notes/785.is-graph-bipartite.md)
   - [804.unique-morse-code-words](leetCode.notes/804.unique-morse-code-words.md)
   - [980.unique-paths-iii](leetCode.notes/980.unique-paths-iii.md)
