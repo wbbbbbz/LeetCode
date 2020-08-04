@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /*
  * @lc app=leetcode id=437 lang=java
  *
@@ -54,32 +56,58 @@
  */
 class Solution {
 
-    private int sum;
-    private int res;
+    // testcase: [10,5,-3,3,2,null,11,3,-2,null,1]\n3
 
-    public int pathSum(TreeNode root, int sum) {
-        if (root == null) {
+    private HashMap<Integer, Integer> map = new HashMap<>();
+
+    private int target;
+
+    public int pathSum(TreeNode root, int sum){
+
+        if (root == null){
             return 0;
         }
-        this.sum = sum;
-        pathSumHelper(root, sum);
-        return res;
+
+        map.put(0, 1);
+
+        this.target = sum;
+
+        return pathSumHelper(root, 0);
+
+        // return pathSumFrom(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
+        // 21ms
     }
 
-    private void pathSumHelper(TreeNode root, int rest) {
-        if (root == null) {
-            return;
+    private int pathSumHelper(TreeNode root, int sum){
+        
+        if (root == null){
+            return 0;
         }
-        System.out.println("root: "+root.val+", rest: "+rest+", res: "+this.res);
-        if (root.val == rest) {
-            this.res++;
-            return;
-        } else {
-            pathSumHelper(root.left, rest - root.val);
-            pathSumHelper(root.left, this.sum);
-            pathSumHelper(root.right, rest - root.val);
-            pathSumHelper(root.right, this.sum);
-        }
+
+        sum += root.val;
+
+        int count = map.getOrDefault(sum - target, 0);
+
+        map.put(sum, map.getOrDefault(sum, 0) + 1);
+
+        int res = count + pathSumHelper(root.left, sum) + pathSumHelper(root.right, sum);
+
+        map.put(sum, map.get(sum) - 1);
+
+        return res;
+        
+        // 2ms
+
     }
+
+    // private int pathSumFrom(TreeNode root, int sum){
+    //     if (root == null){
+    //         return 0;
+    //     }
+    //     int res = root.val == sum ? 1 : 0;
+
+    //     return res + pathSumFrom(root.left, sum - root.val) + pathSumFrom(root.right, sum - root.val);
+    // }
+
 }
 // @lc code=end

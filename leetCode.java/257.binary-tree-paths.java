@@ -1,3 +1,4 @@
+import java.util.*;
 /*
  * @lc app=leetcode id=257 lang=java
  *
@@ -43,37 +44,65 @@
  */
 class Solution {
 
-    private List<String> list;
-
-    public List<String> binaryTreePaths(TreeNode root) {
-
-        list = new ArrayList<>();
-
-        if (root != null)
-            helper(root, new StringBuilder());
-
-        return list;
-
-    }
-
-    private void helper(TreeNode root, StringBuilder path) {
-        path.append(root.val);
-        // System.out.println(path);
-        if (root.left == null && root.right == null) {
-            list.add(path.toString());
-            return;
+    public List<String> binaryTreePaths(TreeNode root){
+        if (root == null){
+            return Arrays.asList();
         }
-        path.append("->");
-        String temp = path.toString();
-        if (root.left != null)
-            helper(root.left, path);
-        if (root.right != null)
-            helper(root.right, new StringBuilder(temp));
 
-        // 209/209 cases passed (1 ms)
-        // Your runtime beats 100 % of java submissions
-        // Your memory usage beats 5.55 % of java submissions (39 MB)
+        if (root.left == null && root.right == null){
+            return Arrays.asList(Integer.toString(root.val));
+        }
 
+        List<String> res = new LinkedList<>();
+
+        List<String> leftList = binaryTreePaths(root.left);
+        for (String s : leftList) {
+            StringBuilder sb = new StringBuilder(Integer.toString(root.val));
+            sb.append("->");
+            sb.append(s);
+            res.add(sb.toString());
+        }
+        List<String> rightList = binaryTreePaths(root.right);
+        for (String s : rightList) {
+            StringBuilder sb = new StringBuilder(Integer.toString(root.val));
+            sb.append("->");
+            sb.append(s);
+            res.add(sb.toString());
+        }
+        return res;
     }
+
+    // private List<String> list;
+
+    // public List<String> binaryTreePaths(TreeNode root) {
+
+    //     list = new ArrayList<>();
+
+    //     if (root != null)
+    //         helper(root, new StringBuilder());
+
+    //     return list;
+
+    // }
+
+    // private void helper(TreeNode root, StringBuilder path) {
+    //     path.append(root.val);
+    //     // System.out.println(path);
+    //     if (root.left == null && root.right == null) {
+    //         list.add(path.toString());
+    //         return;
+    //     }
+    //     path.append("->");
+    //     String temp = path.toString();
+    //     if (root.left != null)
+    //         helper(root.left, path);
+    //     if (root.right != null)
+    //         helper(root.right, new StringBuilder(temp));
+
+    //     // 209/209 cases passed (1 ms)
+    //     // Your runtime beats 100 % of java submissions
+    //     // Your memory usage beats 5.55 % of java submissions (39 MB)
+
+    // }
 }
 // @lc code=end

@@ -88,6 +88,9 @@ class Solution {
         if (root == null){
             return depth;
         }
+        if (res == false){
+            return -1;
+        }
 
         int lDepth = getDepth(root.left, depth + 1);
         int rDepth = getDepth(root.right, depth + 1);
