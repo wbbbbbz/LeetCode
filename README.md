@@ -20,6 +20,8 @@
   - [46.permutations](leetCode.notes/46.permutations.md)
   - [47.permutations-ii](leetCode.notes/47.permutations-ii.md)
   - [49.group-anagrams](leetCode.notes/49.group-anagrams.md)
+  - [51.n-queens](leetCode.notes/51.n-queens.md)
+  - [52.n-queens-ii](leetCode.notes/52.n-queens-ii.md)
   - [61.rotate-list](leetCode.notes/61.rotate-list.md)
   - [75.sort-colors](leetCode.notes/75.sort-colors.md)
   - [76.minimum-window-substring](leetCode.notes/76.minimum-window-substring.md)
