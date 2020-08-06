@@ -49,6 +49,7 @@
   - [111.minimum-depth-of-binary-tree](leetCode.notes/111.minimum-depth-of-binary-tree.md)
   - [112.path-sum](leetCode.notes/112.path-sum.md)
   - [113.path-sum-ii](leetCode.notes/113.path-sum-ii.md)
+  - [120.triangle](leetCode.notes/120.triangle.md)
   - [125.valid-palindrome](leetCode.notes/125.valid-palindrome.md)
   - [126.word-ladder-ii](leetCode.notes/126.word-ladder-ii.md)
   - [127.word-ladder](leetCode.notes/127.word-ladder.md)
