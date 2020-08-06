@@ -24,6 +24,7 @@
   - [51.n-queens](leetCode.notes/51.n-queens.md)
   - [52.n-queens-ii](leetCode.notes/52.n-queens-ii.md)
   - [61.rotate-list](leetCode.notes/61.rotate-list.md)
+  - [64.minimum-path-sum](leetCode.notes/64.minimum-path-sum.md)
   - [70.climbing-stairs](leetCode.notes/70.climbing-stairs.md)
   - [75.sort-colors](leetCode.notes/75.sort-colors.md)
   - [76.minimum-window-substring](leetCode.notes/76.minimum-window-substring.md)
