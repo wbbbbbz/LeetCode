@@ -79,6 +79,7 @@
   - [208.implement-trie-prefix-tree](leetCode.notes/208.implement-trie-prefix-tree.md)
   - [209.minimum-size-subarray-sum](leetCode.notes/209.minimum-size-subarray-sum.md)
   - [211.add-and-search-word-data-structure-design](leetCode.notes/211.add-and-search-word-data-structure-design.md)
+  - [213.house-robber-ii](leetCode.notes/213.house-robber-ii.md)
   - [215.kth-largest-element-in-an-array](leetCode.notes/215.kth-largest-element-in-an-array.md)
   - [216.combination-sum-iii](leetCode.notes/216.combination-sum-iii.md)
   - [217.contains-duplicate](leetCode.notes/217.contains-duplicate.md)
