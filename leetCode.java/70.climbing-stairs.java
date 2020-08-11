@@ -55,16 +55,27 @@ class Solution {
         if (n <= 2) {
             return Math.max(0, n);
         }
-        int[] path = new int[n];
-        path[0] = 1;
-        path[1] = 2;
+        // int[] path = new int[n];
+        // path[0] = 1;
+        // path[1] = 2;
+        // for (int i = 2; i < n; i++) {
+        //     path[i] = path[i - 1] + path[i - 2];
+        // }
+
+        // return path[n - 1];
+
+        int prepre = 1;
+        int pre = 2;
+        int res = 0;
         for (int i = 2; i < n; i++) {
-            path[i] = path[i - 1] + path[i - 2];
+            res = prepre + pre;
+            prepre = pre;
+            pre = res;
         }
 
-        return path[n - 1];
+        return res;
 
-        // 0ms, 38MB
+        // 0ms, 36.1MB
 
     }
 }
