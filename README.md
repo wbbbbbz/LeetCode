@@ -69,6 +69,7 @@
   - [149.max-points-on-a-line](leetCode.notes/149.max-points-on-a-line.md)
   - [150.evaluate-reverse-polish-notation](leetCode.notes/150.evaluate-reverse-polish-notation.md)
   - [167.two-sum-ii-input-array-is-sortedy](leetCode.notes/167.two-sum-ii-input-array-is-sorted.md)
+  - [198.house-robber](leetCode.notes/198.house-robber.md)
   - [199.binary-tree-right-side-view](leetCode.notes/199.binary-tree-right-side-view.md)
   - [200.number-of-islands](leetCode.notes/200.number-of-islands.md)
   - [202.happy-number](leetCode.notes/202.happy-number.md)
