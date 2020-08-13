@@ -61,6 +61,7 @@
   - [130.surrounded-regions](leetCode.notes/130.surrounded-regions.md)
   - [131.palindrome-partitioning](leetCode.notes/131.palindrome-partitioning.md)
   - [136.single-number](leetCode.notes/136.single-number.md)
+  - [139.word-break](leetCode.notes/139.word-break.md)
   - [143.reorder-list](leetCode.notes/143.reorder-list.md)
   - [144.binary-tree-preorder-traversal](leetCode.notes/144.binary-tree-preorder-traversal.md)
   - [145.binary-tree-postorder-traversal](leetCode.notes/145.binary-tree-postorder-traversal.md)
