@@ -103,6 +103,7 @@
   - [290.word-pattern](leetCode.notes/290.word-pattern.md)
   - [292.nim-game](leetCode.notes/292.nim-game.md)
   - [299.bulls-and-cows](leetCode.notes/299.bulls-and-cows.md)
+  - [300.longest-increasing-subsequence](leetCode.notes/300.longest-increasing-subsequence.md)
   - [303.range-sum-query-immutable](leetCode.notes/303.range-sum-query-immutable.md)
   - [307.range-sum-query-mutable](leetCode.notes/307.range-sum-query-mutable.md)
   - [309.best-time-to-buy-and-sell-stock-with-cooldown](leetCode.notes/309.best-time-to-buy-and-sell-stock-with-cooldown.md)
