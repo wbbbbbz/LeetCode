@@ -130,6 +130,7 @@
   - [451.sort-characters-by-frequency](leetCode.notes/451.sort-characters-by-frequency.md)
   - [454.4-sum-ii](leetCode.notes/454.4-sum-ii.md)
   - [474.ones-and-zeroes](leetCode.notes/474.ones-and-zeroes.md)
+  - [494.target-sum](leetCode.notes/494.target-sum.md)
   - [589.n-ary-tree-preorder-traversal](leetCode.notes/589.n-ary-tree-preorder-traversal.md)
   - [590.n-ary-tree-postorder-traversal](leetCode.notes/590.n-ary-tree-postorder-traversal.md)
   - [677.map-sum-pairs](leetCode.notes/677.map-sum-pairs.md)
