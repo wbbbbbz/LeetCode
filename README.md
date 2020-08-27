@@ -1,6 +1,8 @@
 # LeetCode 解题笔记和源码
 
-大家好，欢迎来到我的leetcode解题笔记和源码Repo。我将解题的时候的一些感想和参考资料放在了解题笔记里。
+大家好，欢迎来到我的leetcode解题笔记和源码Repo。解决leetcode问题的时候使用了VSCode的leetcode插件。请参考[vscode-leetcode](https://github.com/LeetCode-OpenSource/vscode-leetcode)。
+
+我将解题的时候的一些感想和参考资料放在了解题笔记里。
 欢迎参考并且提出意见。
 
 | 解题笔记 | Java源码 |
