@@ -126,6 +126,7 @@
   - [404.sum-of-left-leaves](leetCode.notes/404.sum-of-left-leaves.md)
   - [416.partition-equal-subset-sum](leetCode.notes/416.partition-equal-subset-sum.md)
   - [417.pacific-atlantic-water-flow](leetCode.notes/417.pacific-atlantic-water-flow.md)
+  - [435.non-overlapping-intervals](leetCode.notes/435.non-overlapping-intervals.md)
   - [437.path-sum-iii](leetCode.notes/437.path-sum-iii.md)
   - [438.find-all-anagrams-in-a-string](leetCode.notes/438.find-all-anagrams-in-a-string.md)
   - [445.add-two-numbers-ii](leetCode.notes/445.add-two-numbers-ii.md)
