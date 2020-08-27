@@ -4,7 +4,7 @@
 欢迎参考并且提出意见。
 
 | 解题笔记 | Java源码 |
-| :---: | :---: |
+| :--- | :--- |
 | [1.two-sum](leetCode.notes/1.two-sum.md) | [Java源码](leetCode.java/1.two-sum.java) |
 | [2.add-two-numbers](leetCode.notes/2.add-two-numbers.md) | [Java源码](leetCode.java/2.add-two-numbers.java) |
 | [3.longest-substring-without-repeating-characters](leetCode.notes/3.longest-substring-without-repeating-characters.md) | [Java源码](leetCode.java/3.longest-substring-without-repeating-characters.java) |
