@@ -1,4 +1,4 @@
-# LeetCode 解题笔记和源码
+# LeetCode 解题笔记和源码:key:
 
 大家好，欢迎来到我的leetcode解题笔记和源码Repo。解决leetcode问题的时候使用了VSCode的leetcode插件。请参考[vscode-leetcode](https://github.com/LeetCode-OpenSource/vscode-leetcode)。
 
