@@ -11,6 +11,7 @@
 | [2.add-two-numbers](leetCode.notes/2.add-two-numbers.md) | [Java源码](leetCode.java/2.add-two-numbers.java) |
 | [3.longest-substring-without-repeating-characters](leetCode.notes/3.longest-substring-without-repeating-characters.md) | [Java源码](leetCode.java/3.longest-substring-without-repeating-characters.java) |
 | [4.median-of-two-sorted-arrays](leetCode.notes/4.median-of-two-sorted-arrays.md) | [Java源码](leetCode.java/4.median-of-two-sorted-arrays.java) |
+| [5.longest-palindromic-substring](leetCode.notes/5.longest-palindromic-substring.md) | [Java源码](leetCode.java/5.longest-palindromic-substring.java) |
 | [15.3-sum](leetCode.notes/15.3-sum.md) | [Java源码](leetCode.java/15.3-sum.java) |
 | [17.letter-combinations-of-a-phone-number](leetCode.notes/17.letter-combinations-of-a-phone-number.md) | [Java源码](leetCode.java/17.letter-combinations-of-a-phone-number.java) |
 | [19.remove-nth-node-from-end-of-list](leetCode.notes/19.remove-nth-node-from-end-of-list.md) | [Java源码](leetCode.java/19.remove-nth-node-from-end-of-list.java) |
