@@ -51,14 +51,33 @@
 // @lc code=start
 object Solution {
     // testcase : '"vjkegw"\n"fjavalwehlaijelfiawuejglasdklj"'
-  def customSortString(S: String, T: String): String = {
-    val order = S.toList.zip(1 to S.length).map(t => (t._1 -> t._2)).toMap
-    T.toSeq.sortWith((c1, c2) => order.getOrElse(c1, 0) - order.getOrElse(c2, 0) < 0).unwrap
-  }
+  // def customSortString(S: String, T: String): String = {
+  //   val order = S.toList.zip(1 to S.length).map(t => (t._1 -> t._2)).toMap
+  //   T.toSeq.sortWith((c1, c2) => order.getOrElse(c1, 0) - order.getOrElse(c2, 0) < 0).unwrap
+  // }
 //   39/39 cases passed (488 ms)
 // Your runtime beats 40 % of scala submissions
 // Your memory usage beats 60 % of scala submissions (51.5 MB)
 
+  // def customSortString(S: String, T: String): String = {
+  //   val counter = T.toSeq.groupBy(identity).view.mapValues(_.size).toMap
+  //   val temp = S.toSeq.map(c => c.toString * counter.getOrElse(c, 0)).mkString
+  // //    println(counter.toString())
+  // //    println(temp.toString())
+  // //    println(T.toSeq.diff(temp.toSeq))
+  //   temp.concat(T.toSeq.diff(temp.toSeq))
+  // }
+//   39/39 cases passed (500 ms)
+// Your runtime beats 20 % of scala submissions
+// Your memory usage beats 60 % of scala submissions (51.8 MB)
+
+  def customSortString(S: String, T: String): String = {
+    val order = S.zipWithIndex.toMap.withDefaultValue(27)
+    T.sortBy(order)
+  }
 }
+// 39/39 cases passed (468 ms)
+// Your runtime beats 100 % of scala submissions
+// Your memory usage beats 60 % of scala submissions (51.3 MB)
 // @lc code=end
 
