@@ -5,8 +5,8 @@
 我将解题的时候的一些感想和参考资料放在了解题笔记里。
 欢迎参考并且提出意见。
 
-| 解题笔记 | Java源码 |
-| :--- | :--- |
+| 解题笔记 | Java源码 | Scala源码|
+| :--- | :--- | :--- |
 | [1.two-sum](leetCode.notes/1.two-sum.md) | [Java源码](leetCode.java/1.two-sum.java) |
 | [2.add-two-numbers](leetCode.notes/2.add-two-numbers.md) | [Java源码](leetCode.java/2.add-two-numbers.java) |
 | [3.longest-substring-without-repeating-characters](leetCode.notes/3.longest-substring-without-repeating-characters.md) | [Java源码](leetCode.java/3.longest-substring-without-repeating-characters.java) |
@@ -151,6 +151,7 @@
 | [773.sliding-puzzle](leetCode.notes/773.sliding-puzzle.md) | [Java源码](leetCode.java/773.sliding-puzzle.java) |
 | [783.minimum-distance-between-bst-nodes](leetCode.notes/783.minimum-distance-between-bst-nodes.md) | [Java源码](leetCode.java/783.minimum-distance-between-bst-nodes.java) |
 | [785.is-graph-bipartite](leetCode.notes/785.is-graph-bipartite.md) | [Java源码](leetCode.java/785.is-graph-bipartite.java) |
+| [791.custom-sort-string](leetCode.notes/791.custom-sort-string.md) |  |[Scala源码](leetCode.scala/791.custom-sort-string.scala)
 | [804.unique-morse-code-words](leetCode.notes/804.unique-morse-code-words.md) | [Java源码](leetCode.java/804.unique-morse-code-words.java) |
 | [980.unique-paths-iii](leetCode.notes/980.unique-paths-iii.md) | [Java源码](leetCode.java/980.unique-paths-iii.java) |
 | [1091.shortest-path-in-binary-matrix](leetCode.notes/1091.shortest-path-in-binary-matrix.md) | [Java源码](leetCode.java/1091.shortest-path-in-binary-matrix.java) |
