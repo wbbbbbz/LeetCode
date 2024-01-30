@@ -1,3 +1,4 @@
 {
-    "aiXcoder.localShowIncompleteSuggestions": false
+    "aiXcoder.localShowIncompleteSuggestions": false,
+    "python.analysis.typeCheckingMode": "basic"
 }
